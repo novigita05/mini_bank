@@ -36,8 +36,8 @@
                                 <a href="<?php echo site_url('pegawai/edit/' .$pegawai_item['id_pegawai']); ?>" class="menu2"> Edit </a>
                                 <a href="<?php echo site_url('pegawai/delete/' .$pegawai_item['id_pegawai']); ?>" class="menu2" onClick="return confirm(' Are You Sure Want to delete?')"> Delete </a>
                               </td>
-                </tr>
-              <?php endforeach; ?>
+                            </tr>
+                            <?php endforeach; ?>
                       		</tbody>
                     	</table>
                     </div>

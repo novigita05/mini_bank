@@ -11,16 +11,29 @@
                         		<tr>
                           			<th>No</th>
                           			<th>NIS</th>
-                          			<th>User ID</th>
                           			<th>Nama Lengkap Siswa</th>
-                          			<th>Kelas</th>
+                                <th>Email</th>
                           			<th>Jenis Kelamin</th>
-                          			<th>Nama OrangTua</th> 
+                                <th>Alamat</th>
                           			<th>Aksi</th>
                         		</tr>
                       		</thead>
                       		<tbody>
-                        		<?php foreach ($siswa as $siswa_item); ?>
+                        		<?php foreach ($siswa as $siswa_item): ?>
+                            <tr>
+                              <td align="center"><?php echo $siswa_item['id_siswa']; ?></td>
+                              <td align="center"><?php echo $siswa_item['nis']; ?></td>
+                              <td align="center"><?php echo $siswa_item['nama']; ?></td>
+                              <td align="center"><?php echo $siswa_item['email']; ?></td>
+                              <td align="center"><?php echo $siswa_item['jenis_kelamin']; ?></td>
+                              <td align="center"><?php echo $siswa_item['alamat']; ?></td>
+                              <td align="center">
+                                <a href="<?php echo site_url('siswa/view/'.$siswa_item['id_siswa']); ?>" class="menu2"> View </a> 
+                                <a href="<?php echo site_url('siswa/edit/' .$siswa_item['id_siswa']); ?>" class="menu2"> Edit </a>
+                                <a href="<?php echo site_url('siswa/delete/' .$siswa_item['id_siswa']); ?>" class="menu2" onClick="return confirm(' Are You Sure Want to delete?')"> Delete </a>
+                              </td>
+                            </tr>
+                            <?php endforeach; ?>
                       		</tbody>
                     	</table>
                     </div>

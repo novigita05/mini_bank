@@ -46,8 +46,7 @@ class Pegawai extends CI_Controller
 		else
 		{
 			$this->Pegawai_model->set_pegawai();
-			$this->load->view('index', $data);
-		    $this->load->view('pegawai/pegawai');
+			redirect(base_url() . 'pegawai');
 		}	
 	}
 
@@ -81,18 +80,23 @@ class Pegawai extends CI_Controller
 		}
 		else
 		{
-			$this->pegawai_model->set_pegawai($id);
-			redirect(base_url() . 'pegawai/pegawai');
+			$this->Pegawai_model->set_pegawai($id);
+			redirect(base_url() . 'pegawai');
 		}
 	}
 
-	 public function delete($id_pegawai)
-    {
-        $id['id_pegawai'] = $this->uri->segment(3);
-
-        $data = $this->Pegawai_model->delete($id_pegawai);
-
-        redirect('pegawai/pegawai');
-
-    }
+	public function delete()
+	{
+		$id = $this->uri->segment(3);
+		
+		if (empty($id))
+		{
+			show_404();
+		}
+		
+		$pegawai_item = $this->Pegawai_model->get_pegawai_by_id($id);
+		
+		$this->Pegawai_model->delete($id);
+		redirect(base_url() . 'pegawai');
+	}
 }

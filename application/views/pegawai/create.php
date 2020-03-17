@@ -4,33 +4,38 @@
             <div class="col-sm-12">
                 <div class="card">
                   	<div class="card-header">
-                    	<strong>Tambah Data Pegawai</strong>
+                    	<h3><?php echo $title; ?></h3>
                   	</div>
+
+                    <?php echo validation_errors(); ?>
+
+                    <?php echo form_open('pegawai/create'); ?>
+                    
                   	<div class="card-body">
 
                     	<div class="form-group">
                       		<label for="nip">NIP</label>
-                      		<input class="form-control" id="nip" type="text" placeholder="nip">
+                      		<input class="form-control" name="nip" type="text" placeholder="nip">
                     	</div>
 
                     	<div class="form-group">
                       		<label for="nuptk">NUPTK</label>
-                      		<input class="form-control" id="nuptk" type="text" placeholder="nuptk">
+                      		<input class="form-control" name="nuptk" type="text" placeholder="nuptk">
                     	</div>
 
                       <div class="form-group">
                           <label for="nama">Nama Lengkap</label>
-                          <input class="form-control" id="nama" type="text" placeholder="nama">
+                          <input class="form-control" name="nama" type="text" placeholder="nama">
                       </div>
 
                       <div class="form-group">
                           <label for="email">Email Pegawai</label>
-                          <input class="form-control" id="email" type="text" placeholder="email">
+                          <input class="form-control" name="email" type="text" placeholder="email">
                       </div>
 
                       <div class="form-group">
                         <label for="status">Status Pegawai</label>
-                          <select class="form-control" id="status" name="status">
+                          <select class="form-control" name="status">
                             <option value="">Please select</option>
                             <option value="GTY">GTY</option>
                             <option value="PTY">PTY</option>
@@ -39,7 +44,7 @@
 
                       <div class="form-group">
                         <label for="jenis_kelamin">Jenis Kelamin</label>
-                          <select class="form-control" id="jenis_kelamin" name="jenis_kelamin">
+                          <select class="form-control" name="jenis_kelamin">
                             <option value="">Please select</option>
                             <option value="Laki-Laki">Laki-Laki</option>
                             <option value="Perempuan">Perempuan</option>
@@ -48,7 +53,7 @@
 
                       <div class="form-group">
                           <label for="no_telp">No. Telepon</label>
-                          <input class="form-control" id="no_telp" type="text" placeholder="No. Telepon">
+                          <input class="form-control" name="no_telp" type="text" placeholder="No. Telepon">
                       </div>
 
                       <div class="card-footer">

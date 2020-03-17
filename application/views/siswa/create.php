@@ -4,7 +4,7 @@
             <div class="col-sm-12">
                 <div class="card">
                   	<div class="card-header">
-                    	<strong>Tambah Data Siswa</strong>
+                    	<h3><?php echo $title; ?></h3>
                   	</div>
                     
                     <div class="col-sm-4">
@@ -14,36 +14,40 @@
                     <a href="<?php echo site_url('siswa/create_lainnya'); ?>" class="btn btn-primary">Lainnya</a>
                     </div>
 
+                    <?php echo validation_errors(); ?>
+
+                    <?php echo form_open('siswa/create'); ?>
+
                   	<div class="card-body">
 
                     	<div class="form-group">
                       		<label for="nis">NIS</label>
-                      		<input class="form-control" id="nis" type="text" placeholder="nis">
+                      		<input class="form-control" name="nis" type="text" placeholder="nis">
                     	</div>
 
                     	<div class="form-group">
                       		<label for="nik">NIK</label>
-                      		<input class="form-control" id="nik" type="text" placeholder="nik">
+                      		<input class="form-control" name="nik" type="text" placeholder="nik">
                     	</div>
 
                       <div class="form-group">
                           <label for="nisn">NISN</label>
-                          <input class="form-control" id="nisn" type="text" placeholder="NISN">
+                          <input class="form-control" name="nisn" type="text" placeholder="NISN">
                       </div>
 
                       <div class="form-group">
                           <label for="nama">Nama Lengkap</label>
-                          <input class="form-control" id="nama" type="text" placeholder="nama">
+                          <input class="form-control" name="nama" type="text" placeholder="nama">
                       </div>
 
                       <div class="form-group">
                           <label for="email">Email</label>
-                          <input class="form-control" id="email" type="text" placeholder="Email">
+                          <input class="form-control" name="email" type="text" placeholder="Email">
                       </div>
 
                       <div class="form-group">
                         <label for="jenis_kelamin">Jenis Kelamin</label>
-                          <select class="form-control" id="jenis_kelamin" name="jenis_kelamin">
+                          <select class="form-control" name="jenis_kelamin">
                             <option value="">Please select</option>
                             <option value="Laki-Laki">Laki-Laki</option>
                             <option value="Perempuan">Perempuan</option>
@@ -52,7 +56,7 @@
 
                       <div class="form-group">
                         <label for="agama">Agama</label>
-                          <select class="form-control" id="agama" name="agama">
+                          <select class="form-control" name="agama" name="agama">
                             <option value="">Please select</option>
                             <option value="Islam">Islam</option>
                             <option value="Kristen">Kristen</option>
@@ -63,60 +67,51 @@
                           </select>
                       </div>
 
-                      <div class="form-group">
-                        <label for="">Kelas</label>
-                          <select class="form-control" id="" name="">
-                            <option value="">Please select</option>
-                            <option value="X-RPL-1">X-RPL-1</option>
-                            <option value="X-RPL-2">X-RPL-2</option>
-                          </select>
-                      </div>
-
                       <div class="row">
                       <div class="form-group col-sm-6">
-                        <label for="">RT</label>
-                        <input class="form-control" id="" type="text" placeholder="RT">
+                        <label for="rt">RT</label>
+                        <input class="form-control" name="rt" type="text" placeholder="RT">
                       </div>
                       <div class="form-group col-sm-6">
                         <label for="">RW</label>
-                        <input class="form-control" id="" type="text" placeholder="RW">
+                        <input class="form-control" name="rw" type="text" placeholder="RW">
                       </div>
                     </div>
 
                       <div class="form-group">
                           <label for="dusun">Dusun</label>
-                          <input class="form-control" id="dusun" type="text" placeholder="Dusun">
+                          <input class="form-control" name="dusun" type="text" placeholder="Dusun">
                       </div>
 
                       <div class="form-group">
                           <label for="kelurahan">Kelurahan</label>
-                          <input class="form-control" id="kelurahan" type="text" placeholder="Kelurahan">
+                          <input class="form-control" name="kelurahan" type="text" placeholder="Kelurahan">
                       </div>
 
                       <div class="form-group">
                           <label for="kecamatan">Kecamatan</label>
-                          <input class="form-control" id="kecamatan" type="text" placeholder="Kecamatan">
+                          <input class="form-control" name="kecamatan" type="text" placeholder="Kecamatan">
                       </div>
 
                       <div class="form-group">
-                          <label for="">Kode Pos</label>
-                          <input class="form-control" id="" type="text" placeholder="Kode">
+                          <label for="kode_pos">Kode Pos</label>
+                          <input class="form-control" name="kode_pos" type="text" placeholder="Kode">
                       </div>
 
                       <div class="form-group">
-                          <label for="">Jenis Tinggal</label>
-                          <input class="form-control" id="" type="text" placeholder="Jenis Tinggal">
+                          <label for="jenis_tinggal">Jenis Tinggal</label>
+                          <input class="form-control" name="jenis_tinggal" type="text" placeholder="Jenis Tinggal">
                       </div>
 
                       <div class="form-group">
-                          <label for="">Tempat Lahir</label>
-                          <input class="form-control" id="" type="text" placeholder="Tempat Lahir">
+                          <label for="tempat_lahir">Tempat Lahir</label>
+                          <input class="form-control" name="tempat_lahir" type="text" placeholder="Tempat Lahir">
                       </div>
 
                       <div class="row">
                       <div class="form-group col-sm-3">
-                        <label for="">Tanggal Lahir</label>
-                        <select class="form-control" id="">
+                        <label for="tanggal_lahir">Tanggal Lahir</label>
+                        <select class="form-control" name="tanggal_lahir">
                           <option>1</option>
                           <option>2</option>
                           <option>3</option>
@@ -151,8 +146,8 @@
                         </select>
                       </div>
                       <div class="form-group col-sm-6">
-                        <label for="">Bulan</label>
-                        <select class="form-control" id="">
+                        <label for="tanggal_lahir">Bulan</label>
+                        <select class="form-control" name="tanggal_lahir">
                           <option>Januari</option>
                           <option>Februari</option>
                           <option>Maret</option>
@@ -168,8 +163,8 @@
                         </select>
                       </div>
                       <div class="form-group col-sm-3">
-                        <label for="">Tahun</label>
-                        <select class="form-control" id="">
+                        <label for="tanggal_lahir">Tahun</label>
+                        <select class="form-control" name="tanggal_lahir">
                           <option>1998</option>
                           <option>1999</option>
                           <option>2000</option>
@@ -198,18 +193,8 @@
                     </div>
 
                       <div class="form-group">
-                          <label for="">Nama Wali</label>
-                          <input class="form-control" id="" type="text" placeholder="Nama Wali">
-                      </div>
-
-                      <div class="form-group">
-                          <label for="">No. Telepon (Ortu)</label>
-                          <input class="form-control" id="" type="text" placeholder="No. Telepon (Ortu)">
-                      </div>
-
-                      <div class="form-group">
-                          <label for="">Alamat</label>
-                          <input class="form-control" id="" type="text" placeholder="Alamat">
+                          <label for="alamat">Alamat</label>
+                          <input class="form-control" name="alamat" type="text" placeholder="Alamat">
                       </div>
 
                       <div class="card-footer">

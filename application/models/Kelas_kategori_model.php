@@ -1,12 +1,12 @@
 <?php
-class Jurusan_model extends CI_Model {
+class Kelas_kategori_model extends CI_Model {
 	
 	public function __construct()
 	{
 		$this->load->database();
 	}
 	
-	public function get_jurusan($id_kategori = FALSE)
+	public function get_kelas_kategori($id_kategori = FALSE)
 	{
 		if ($id_kategori === FALSE)
 		{
@@ -18,7 +18,7 @@ class Jurusan_model extends CI_Model {
 		return $query->row_array();
 	}
 	
-	public function get_jurusan_by_id($id = 0)
+	public function get_kelas_kategori_by_id($id = 0)
 	{
 		if ($id === 0)
 		{
@@ -30,12 +30,12 @@ class Jurusan_model extends CI_Model {
 		return $query->row_array();
 	}
 	
-	public function set_jurusan($id = 0)
+	public function set_kelas_kategori($id = 0)
 	{
 		$this->load->helper('url');
 
 		$data = array (
- 		   'id_kategori' => $this->input->post('id_kategori'),
+ 		   'id_jurusan' => $this->input->post('id_jurusan'),
  		   'kategori_kelas' => $this->input->post('kategori_kelas')
 		);
 		
@@ -47,18 +47,9 @@ class Jurusan_model extends CI_Model {
 		}
 	}
 	
-	public function delete()
+	public function delete($id)
 	{
-		$id = $this->uri->segment(3);
-		
-		if (empty($id))
-		{
-			show_404();
-		}
-		
-		$kelas_kategori = $this->Jurusan_model->get_jurusan_by_id($id);
-		
-		$this->Jurusan_model->delete($id);
-		redirect(base_url() . 'jurusan/jurusan');
+		$this->db->where('id_kategori', $id);
+		return $this->db->delete('kelas_kategori');
 	}
 }

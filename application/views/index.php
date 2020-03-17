@@ -72,7 +72,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?= base_url(); ?>jurusan">
+              <a class="nav-link" href="<?= base_url(); ?>kelas_kategori">
                 <i class="nav-icon icon-speedometer"></i> Jurusan
               </a>
             </li>

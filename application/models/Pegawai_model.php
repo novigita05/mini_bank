@@ -52,18 +52,9 @@ class Pegawai_model extends CI_Model {
 		}
 	}
 	
-	public function delete()
+	public function delete($id)
 	{
-		$id = $this->uri->segment(3);
-		
-		if (empty($id))
-		{
-			show_404();
-		}
-		
-		$pegawai_item = $this->Pegawai_model->get_pegawai_by_id($id);
-		
-		$this->Pegawai_model->delete($id);
-		redirect(base_url() . 'pegawai/pegawai');
+		$this->db->where('id_pegawai', $id);
+		return $this->db->delete('pegawai');
 	}
 }

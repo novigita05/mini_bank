@@ -15,27 +15,27 @@
 
                     	<div class="form-group">
                       		<label for="nip">NIP</label>
-                      		<input class="form-control" id="nip" type="input" value="<?php echo $pegawai_item['nip'] ?>">
+                      		<input class="form-control" name="nip" type="input" value="<?php echo $pegawai_item['nip'] ?>">
                     	</div>
 
                     	<div class="form-group">
                       		<label for="nuptk">NUPTK</label>
-                      		<input class="form-control" id="nuptk" type="input" value="<?php echo $pegawai_item['nuptk'] ?>">
+                      		<input class="form-control" name="nuptk" type="input" value="<?php echo $pegawai_item['nuptk'] ?>">
                     	</div>
 
                       <div class="form-group">
                           <label for="nama">Nama Lengkap</label>
-                          <input class="form-control" id="nama" type="input" value="<?php echo $pegawai_item['nama'] ?>">
+                          <input class="form-control" name="nama" type="input" value="<?php echo $pegawai_item['nama'] ?>">
                       </div>
 
                       <div class="form-group">
                           <label for="email">Email Pegawai</label>
-                          <input class="form-control" id="email" type="input" value="<?php echo $pegawai_item['email'] ?>">
+                          <input class="form-control" name="email" type="input" value="<?php echo $pegawai_item['email'] ?>">
                       </div>
 
                       <div class="form-group">
                         <label for="status">Status Pegawai</label>
-                          <select class="form-control" id="status" name="status">
+                          <select class="form-control" name="status">
                             <option value="<?php echo $pegawai_item['status'] ?>"><?php echo $pegawai_item['status'] ?></option>
                             <option value="GTY">GTY</option>
                             <option value="PTY">PTY</option>
@@ -44,7 +44,7 @@
 
                       <div class="form-group">
                         <label for="jenis_kelamin">Jenis Kelamin</label>
-                          <select class="form-control" id="jenis_kelamin" name="jenis_kelamin">
+                          <select class="form-control" name="jenis_kelamin">
                             <option value="<?php echo $pegawai_item['jenis_kelamin'] ?>"><?php echo $pegawai_item['jenis_kelamin'] ?></option>
                             <option value="Laki-Laki">Laki-Laki</option>
                             <option value="Perempuan">Perempuan</option>
@@ -53,7 +53,7 @@
 
                       <div class="form-group">
                           <label for="no_telp">No. Telepon</label>
-                          <input class="form-control" id="no_telp" type="input" value="<?php echo $pegawai_item['no_telp'] ?>">
+                          <input class="form-control" name="no_telp" type="input" value="<?php echo $pegawai_item['no_telp'] ?>">
                       </div>
 
                       <div class="card-footer">
